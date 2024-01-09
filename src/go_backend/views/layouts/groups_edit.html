@@ -1,0 +1,23 @@
+{{ define "body" }}
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="row">
+            <!-- Striped rows -->
+            <div class="col-md-12 my-4">
+                <h2 class="h4 mb-1">Groups/Edit</h2>
+                <p class="mb-4"></p>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <v-app>
+                            <groups-edit-components app_url="{{ .App_url }}" api_url="{{ .Api_url }}" url_update="/api/v1/backend/groups/update" url_data="/api/v1/backend/groups/edit" url_list="/admin/groups" token="{{ .Token }}" id="{{ .ID }}" label_name="Name" label_status="Status">
+                            </groups-edit-components>
+                        </v-app>
+                    </div>
+                </div>
+            </div>
+            <!-- simple table -->
+        </div>
+        <!-- end section -->
+    </div>
+</div>
+{{ end }}

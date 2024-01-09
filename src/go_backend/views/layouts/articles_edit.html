@@ -1,0 +1,24 @@
+{{ define "body" }}
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="row">
+            <!-- Striped rows -->
+            <div class="col-md-12 my-4">
+                <h2 class="h4 mb-1">Articles/Edit</h2>
+                <p class="mb-4"></p>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <v-app>
+                            <articles-edit-components app_url="{{ .App_url }}" api_url="{{ .Api_url }}" url_update="/api/v1/backend/articles/update" url_data="/api/v1/backend/articles/edit" url_category="/api/v1/backend/categorys-dropdownlist" url_list="/admin/articles" token="{{ .Token }}"
+                                id="{{ .ID }}" label_name="Title" label_description="Description" label_short_description="Short description" label_category="Category" label_status="Status" user_id="{{ .User_id }}">
+                            </articles-edit-components>
+                        </v-app>
+                    </div>
+                </div>
+            </div>
+            <!-- simple table -->
+        </div>
+        <!-- end section -->
+    </div>
+</div>
+{{ end }}

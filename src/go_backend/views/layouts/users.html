@@ -1,0 +1,25 @@
+{{ define "body" }}
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="row">
+            <!-- Striped rows -->
+            <div class="col-md-12 my-4">
+                <h2 class="h4 mb-1">Users</h2>
+                <p class="mb-4"></p>
+                <div class="card shadow">
+                    <div class="card-body">
+
+                        <v-app>
+                            <users-datatable-components app_url="{{ .App_url }}" api_url="{{ .Api_url }}" api_path_data="/api/v1/backend/users" api_path_delete="/api/v1/backend/users/delete" url_add_data="/admin/users/add" url_edit="/admin/users/edit" token="{{ .Token }}">
+                            </users-datatable-components>
+                        </v-app>
+
+                    </div>
+                </div>
+            </div>
+            <!-- simple table -->
+        </div>
+        <!-- end section -->
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,24 @@
+{{ define "body" }}
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="row">
+            <!-- Striped rows -->
+            <div class="col-md-12 my-4">
+                <h2 class="h4 mb-1">Users/Add</h2>
+                <p class="mb-4"></p>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <v-app>
+                            <users-add-components app_url="{{ .App_url }}" api_url="{{ .Api_url }}" url_store="/api/v1/backend/users/create" url_groups="/api/v1/backend/groups-dropdownlist" url_list="/admin/users" token="{{ .Token }}" label_name="Name" label_username="Username"
+                                label_email="Email" label_group="Group" label_password="Password" label_status="Status" user_id="{{ .User_id }}">
+                            </users-add-components>
+                        </v-app>
+                    </div>
+                </div>
+            </div>
+            <!-- simple table -->
+        </div>
+        <!-- end section -->
+    </div>
+</div>
+{{ end }}
